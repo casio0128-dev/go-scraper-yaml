@@ -1,0 +1,40 @@
+version: "1.0.0"
+var:
+  - "SAMPLE_VARIABLE"
+
+duration: "1sec"
+
+wakeUp:
+  - "10:00": "Login"
+
+# - "FuncName":
+#   - Do
+# find, findById, findByClass, findByXPATH,
+# click, sendKeys, fill, text, attr, var
+# if, for,
+"sampleFunc":
+  - "find": "div.sample"
+  - "findByID": "unique"
+  - "findByClass": "multiple"
+  - "findByXPATH": "//div[@id='sample']"
+  - "click":
+    - "find": "div.sample"
+  - "sendKeys:":
+    - "find": "div.sample"
+    - "text": "sample"
+  - "fill":
+    - "find": "div.sample"
+    - "text": "sample"
+  - "text":
+    - "find": "div.sample"
+    - "var": "SAMPLE_VARIABLE"
+  - "attr":
+      - "find": "div.sample"
+      - "var": "SAMPLE_VARIABLE"
+  - "if":
+    - "condition1 eq {{condition2}}":
+    - "condition1 ne {{condition2}}":
+    - "condition1 gt {{condition2}}":
+    - "condition1 lt {{condition2}}":
+  - "for":
+    - "condition1 eq {{condition2}}":
